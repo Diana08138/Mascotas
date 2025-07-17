@@ -1,0 +1,55 @@
+inicio
+
+definir clase mascota
+
+definir atributos privados:
+
+string nombre
+
+string tipo
+
+string sonido
+
+int edad 
+
+
+
+Definir Metodo MostrarInformacion()
+
+Mostrar "Nombre: " + nombre
+
+Mostrar "Edad: " + edad + años
+
+Mostrar "Tipo: " + tipo
+
+
+
+Definir Metodo EmitirSonido()
+
+Mostrar nombre + "sonido: " + sonido
+
+
+
+Fin clase Mascota
+
+Definir clase principal Program
+
+Metodo Main()
+
+Crear objeto miMascota como nueva Mascota con:
+
+nombre = Oreo
+
+edad = 6 
+
+tipo = "cachorro"
+
+sonido = "guau guau"
+
+
+
+Llamar a miMascotaInformacion()
+
+Llamar a miMascota.EmitirSonido()
+
+Fin
