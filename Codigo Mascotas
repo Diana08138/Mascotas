@@ -1,0 +1,53 @@
+using System;
+
+namespace MascotasApp
+{
+    // Defini la mascota
+    class Mascota
+    {
+        // Atributos privados
+        private string nombre;
+        private int edad;
+        private string tipo;     // estos son los ejemplos: "perro, "gato", "hamster", "pez"
+        private string sonido;   // estos son los ejemplos: "guau guau", "miau", "scuic", "glu glu"
+
+        // Inician los atributos
+        public Mascota(string nom, int ed, string ti, string son)
+        {
+            nombre = nom;
+            edad = ed;
+            tipo = ti;
+            sonido = son;
+        }
+
+        // Mostrara la informacion de la mascota
+        public void MostrarInformacion()
+        {
+            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Edad: " + edad + " años");
+            Console.WriteLine("Tipo: " + tipo);
+        }
+
+        // Metodo para emitir el sonido 
+        public void EmitirSonido()
+        {
+            Console.WriteLine(nombre + " hace: " + sonido);
+        }
+    }
+
+    // Clase principal
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Se crea la mascota
+            Mascota miMascota = new Mascota("Oreo", 2, "perro", "guau guau ");
+
+            // Se muestra su informacion
+            miMascota.MostrarInformacion();
+
+            // Hago ue emita su sonido
+            miMascota.EmitirSonido();
+        }
+    }
+}
