@@ -71,8 +71,6 @@ namespace MascotasApp
             int edadHumanaOreo = miMascota.CalcularEdadHumana();
             Console.WriteLine("Oreo" + " en edad humana tiene " + edadHumanaOreo + " años.");
 
-            ---
-
             // Segunda mascota: Copo
             Mascota miMascota2 = new Mascota("Copo", 9, "gato", "miau");
 
@@ -85,8 +83,6 @@ namespace MascotasApp
             Console.WriteLine("Con el calculo: " + "Copo" + " tiene " + miMascota2.GetEdad() + " años.");
             int edadHumanaCopo = miMascota2.CalcularEdadHumana();
             Console.WriteLine("Copo" + " en edad humana tiene " + edadHumanaCopo + " años. ");
-
-            ---
 
             // Tercera mascota: Walls
             Mascota miMascota3 = new Mascota("Walls", 2, "hamster", "suic");
