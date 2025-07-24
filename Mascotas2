@@ -1,0 +1,105 @@
+using System;
+
+namespace MascotasApp
+{
+    // Defini la mascota
+    class Mascota
+    {
+        // Atributos privados
+        private string nombre;
+        private int edad;
+        private string tipo;
+        private string sonido;
+
+        // Inician los atributos
+        public Mascota(string nom, int ed, string ti, string son)
+        {
+            nombre = nom;
+            edad = ed;
+            tipo = ti;
+            sonido = son;
+        }
+
+        // Getter para edad (getEdad)
+        public int GetEdad()
+        {
+            return edad;
+        }
+
+        // Setter para edad (set(int nuevaEdad))
+        public void SetEdad(int nuevaEdad)
+        {
+            edad = nuevaEdad; // Asigna directamente la nueva edad
+        }
+
+        // Metodo para mostrar la informacion
+        public void MostrarInformacion()
+        {
+            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Edad: " + edad + " años");
+            Console.WriteLine("Tipo: " + tipo);
+        }
+
+        // Metodo para emitir el sonido
+        public void EmitirSonido()
+        {
+            Console.WriteLine(nombre + " hace: " + sonido);
+        }
+
+        // Metodo para calcular la edad humana
+        public int CalcularEdadHumana()
+        {
+            int factorConversion = 7; // Sera un factor de conversion 
+            return edad * factorConversion;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Primera mascota: Oreo
+            Mascota miMascota = new Mascota("Oreo", 6, "perro", "guau guau ");
+
+            Console.WriteLine("Informacion de Oreo");
+            miMascota.MostrarInformacion();
+            miMascota.EmitirSonido();
+
+            Console.WriteLine("Oreo" + " tiene " + miMascota.GetEdad() + " años.");
+            miMascota.SetEdad(7);
+            Console.WriteLine("Con el calculo: " + "Oreo" + " tiene " + miMascota.GetEdad() + " años.");
+            int edadHumanaOreo = miMascota.CalcularEdadHumana();
+            Console.WriteLine("Oreo" + " en edad humana tiene " + edadHumanaOreo + " años.");
+
+            ---
+
+            // Segunda mascota: Copo
+            Mascota miMascota2 = new Mascota("Copo", 9, "gato", "miau");
+
+            Console.WriteLine("Información de Copo");
+            miMascota2.MostrarInformacion();
+            miMascota2.EmitirSonido();
+
+            Console.WriteLine("Copo" + " tiene " + miMascota2.GetEdad() + " años.");
+            miMascota2.SetEdad(7);
+            Console.WriteLine("Con el calculo: " + "Copo" + " tiene " + miMascota2.GetEdad() + " años.");
+            int edadHumanaCopo = miMascota2.CalcularEdadHumana();
+            Console.WriteLine("Copo" + " en edad humana tiene " + edadHumanaCopo + " años. ");
+
+            ---
+
+            // Tercera mascota: Walls
+            Mascota miMascota3 = new Mascota("Walls", 2, "hamster", "suic");
+
+            Console.WriteLine("Información de Walls");
+            miMascota3.MostrarInformacion();
+            miMascota3.EmitirSonido();
+
+            Console.WriteLine("Walls" + " tiene " + miMascota3.GetEdad() + " años.");
+            miMascota3.SetEdad(7);
+            Console.WriteLine("Con el calculo: " + "Walls" + " tiene " + miMascota3.GetEdad() + " años.");
+            int edadHumanaWalls = miMascota3.CalcularEdadHumana();
+            Console.WriteLine("Walls" + " en edad humana tiene " + edadHumanaWalls + " años humanos.");
+        }
+    }   
+}
